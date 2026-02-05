@@ -24,7 +24,7 @@ def extract_and_load():
 with DAG(
     dag_id="postgres_to_snowflake",
     start_date=datetime(2024, 1, 1),
-    schedule_interval="@daily",
+    schedule="@daily",
     catchup=False,
 ) as dag:
 
